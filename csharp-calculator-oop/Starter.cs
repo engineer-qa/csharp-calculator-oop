@@ -111,22 +111,8 @@ namespace csharp_calculator_oop
                     break;
             }
 
-            Console.WriteLine($"Результат: {calculationResult}");
+            Console.WriteLine($"Результат: {calculationResult}\nНажмите любую кнопку для выхода");
             Console.ReadLine();
         }
     }
 }
-
-// Выберите действие
-// 1. Плюсование
-// 2. Отнимание
-// 3. Умножение
-// 4. Деление
-
-// 2. Enter
-// Введите первое число
-// Введите второе число
-// --> result
-
-
-
