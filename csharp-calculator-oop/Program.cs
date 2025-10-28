@@ -1,5 +1,5 @@
 ﻿using csharp_calculator_oop;
 
-var starter = new Starter();
+var louncher = new LounchCalculator();
 
-starter.Start();
+louncher.Lounch();
