@@ -2,7 +2,7 @@
 
 public class Calculator
 {
-    public double LastResult { get; private set; }
+    public double LastResult { get; protected set; }
 
     public double Add (double a, double b)
     {
