@@ -14,7 +14,17 @@
 
                 while (true)
                 {
-                    string[] menu = { "Выберите действие:\n", "1 - Сложение\n", "2 - Отнимание\n", "3 - Умножение\n", "4 - Деление\n", "5 - Pow метод\n", "6 - Получить последнее значение" };
+                    string[] menu = 
+                        { 
+                            "Выберите действие:\n",
+                            "1 - Сложение\n",
+                            "2 - Отнимание\n",
+                            "3 - Умножение\n",
+                            "4 - Деление\n",
+                            "5 - Pow метод\n",
+                            "6 - Overrided Деление\n",
+                            "7 - Получить последнее значение\n",
+                        };
                     var message = string.Concat(menu);
 
                     Console.WriteLine(message);
@@ -46,7 +56,7 @@
                 }
 
 
-                while (true && selectedOperation != 6)
+                while (true && selectedOperation != 7)
                 {
                     Console.WriteLine("Введите первую цифру\n");
                     var firstNumInput = Console.ReadLine();
@@ -62,7 +72,7 @@
                     }
                 }
 
-                while (true && selectedOperation != 6)
+                while (true && selectedOperation != 7)
                 {
                     Console.WriteLine("Введите вторую цифру\n");
                     var secondNumInput = Console.ReadLine();
@@ -106,14 +116,19 @@
                         calculationResult = scientificCalculator.Pow(firstNum, secondNum);
                         break;
                     case 6:
+                        calculationResult = scientificCalculator.Divide(firstNum, secondNum);
+                        break;
+                    case 7:
                         calculationResult = calculator.LastResult;
                         break;
                     default:
                         calculationResult = 0;
                         break;
                 }
-                Console.Clear();
                 Console.WriteLine($"Результат: {calculationResult}");
+                Console.WriteLine("Нажмите любую кнопку, перезапустить калькулятор");
+                Console.ReadLine();
+                Console.Clear();
             }
         }
     }

@@ -22,7 +22,7 @@ public class Calculator
         return LastResult;
     }
 
-    public double Divide(double a, double b)
+    public virtual double Divide(double a, double b)
     {
         LastResult = a / b;
         return LastResult;
